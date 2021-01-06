@@ -1,10 +1,9 @@
+
 public class PigLatin {
     public static String pigLatinSimple(String s) {
-        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
-        for (char i : vowels) {
-            if (i == s.charAt(0)) {
-                return s + "hay";
-            }
+
+        if (s.substring(0, 1).matches("^(a|e|i|o|u)")) {
+            return s + "hay";
         }
         return s.substring(1) + s.substring(0, 1) + "ay";
     }
